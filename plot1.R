@@ -32,8 +32,8 @@ head(plot1_data)
 summary(plot1_data)
 Global_Active_Power <- as.numeric(plot1_data)
 sapply(Global_Active_Power, function(f){is.na(f)<-which(f == "?");f})
-plot1 <- hist(Global_Active_Power,col="red")
-
+plot1 <- hist(Global_Active_Power, main = "Global Active Power", xlab = "Global Active Power (kilowatts)", col = "red")
+              
 plot1
 dev.copy(png,file="plot1.png")
 dev.off()  
